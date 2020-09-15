@@ -79,8 +79,9 @@
     function calculate(){
         salesAmount = parseInt($('#saleAmount').val());
         tax = parseInt($('#saleTax').val());
-       let price = parseInt(salesAmount * tax)
-       let finalPrice = parseInt(salesAmount + price)
+       let taxpercent = (tax/100);
+       let price = (salesAmount * taxpercent)
+       let finalPrice = (salesAmount + price)
        $('#resultBox').text('Final price is'+" " +finalPrice)
        if (!salesAmount==''){
            $('#resultBox').fadeIn('slow');
